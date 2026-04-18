@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burger Pro</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #facc15;
+}
+
+button {
+  background: #facc15;
+  color: black;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+  url("https://images.unsplash.com/photo-1550547660-d9450f859349") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #bbb;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #facc15;
+}
+
+/* MENU */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: 0.3s;
+  box-shadow: 0 0 0 transparent;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #facc15;
+  box-shadow: 0 0 25px rgba(250,204,21,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+/* PRICE DESIGN 🔥 */
+.price-box {
+  margin-bottom: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
+}
+
+.new-price {
+  background: #facc15;
+  color: black;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* BADGE */
+.discount {
+  position: absolute;
+  background: red;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(90deg,#111,#1a1a1a);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+  color: #facc15;
+}
+
+.cta p {
+  color: #bbb;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.cta button {
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  background: #050505;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🔥 Burger Pro</div>
+  <button onclick="orderNow()">اطلب الآن</button>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>طعم أسطوري لا يُنسى 🍔</h1>
+    <p>جرب البرجر الحقيقي اللي الكل بيتكلم عنه</p>
+    <button onclick="orderNow()">اطلب دلوقتي</button>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🍟 المنيو الحصري</h2>
+
+  <div class="menu">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+      <h3>برجر لحم</h3>
+      <div class="price-box">
+        <div class="old-price">120 جنيه</div>
+        <div class="new-price">80 جنيه 🔥</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+      <h3>برجر فراخ</h3>
+      <div class="price-box">
+        <div class="old-price">100 جنيه</div>
+        <div class="new-price">70 جنيه 🔥</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+      <h3>دبل برجر</h3>
+      <div class="price-box">
+        <div class="old-price">160 جنيه</div>
+        <div class="new-price">120 جنيه 🔥</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <h2>🍽️ جاهز لرحلة طعم مختلفة؟</h2>
+  <p>سريع • طازة • يوصل لحد بابك خلال دقائق</p>
+  <button onclick="orderNow()">اطلب عبر واتساب الآن</button>
+</section>
+
+<footer>
+  © 2026 Burger Pro — جميع الحقوق محفوظة
+</footer>
+
+<script>
+function orderNow(){
+  window.open("https://wa.me/201000000000","_blank");
+}
+</script>
+
+</body>
+  </html>
